@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Contact • PrecisionSheets</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            background: #081c33;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: rgba(8, 28, 51, 0.95);
+            backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            z-index: 100;
+            border-bottom: 1px solid rgba(212, 175, 119, 0.1);
+        }
+        
+        .nav-logo {
+            height: 42px;
+            cursor: pointer;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+        }
+        
+        .section {
+            min-height: 100vh;
+            padding: 120px 40px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            margin: 0 0 12px 0;
+        }
+        
+        .subtitle {
+            font-size: 1.15rem;
+            max-width: 420px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        
+        .tally-container {
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        
+        .footer {
+            margin-top: 60px;
+            font-size: 0.95rem;
+            opacity: 0.75;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html">
+            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo.jpg" alt="PrecisionSheets" class="nav-logo">
+        </a>
+        
+        <div class="nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <h1>Contact</h1>
+        <p class="subtitle">A direct line for finance professionals.</p>
+        
+        <!-- Tally Form -->
+        <div class="tally-container">
+            <iframe data-tally-src="https://tally.so/embed/44NWYd?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                    loading="lazy" 
+                    width="100%" 
+                    height="663" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0" 
+                    title="Contact"></iframe>
+            <script>
+                var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        </div>
+        
+        <div class="footer">
+            © 2026 PrecisionSheets • High-precision tools for serious finance teams
+        </div>
+    </section>
+</body>
+</html>
