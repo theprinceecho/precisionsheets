@@ -58,6 +58,11 @@
         .nav-logo {
             height: 42px;
         }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            font-size: 1.05rem;
+        }
         .nav-links a {
             color: #ffffff;
             text-decoration: none;
@@ -124,21 +129,21 @@
             font-size: 1.15rem;
             line-height: 1.75;
             opacity: 0.95;
+            text-align: justify; /* justified text as requested */
         }
         .footer {
             margin-top: 80px;
-            padding: 40px;
+            padding: 40px 40px 30px;
             font-size: 0.95rem;
             opacity: 0.75;
             text-align: center;
             border-top: 1px solid rgba(212, 175, 119, 0.1);
         }
         .footer-line1 {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
+            margin-bottom: 8px;
+        }
+        .footer-line2 {
+            margin-bottom: 8px;
         }
         #impressum {
             display: none;
@@ -154,6 +159,7 @@
             .logo { width: 220px; height: 220px; }
             h1 { font-size: 2.4rem; }
             .button { width: 100%; max-width: 260px; }
+            .nav-links { gap: 24px; }
         }
     </style>
 </head>
@@ -189,20 +195,27 @@
             specifically designed for FP&amp;A teams, controllers, and finance professionals.<br><br>
             
             Save hours every month with ready-to-use tools that deliver clear variance analysis, 
-            rolling forecasts, cash flow models, and KPI dashboards.<br><br>
+            rolling forecasts, cash flow models, KPI dashboards, and more. The store is being 
+            regularly expanded with new high-quality templates tailored to real-world finance needs.<br><br>
             
-            The store is being regularly expanded with new high-quality templates tailored to real-world finance needs.
+            Should you require a customized version of any template available in the store 
+            or need a bespoke Excel tool built to your specific requirements, please do not 
+            hesitate to reach out via the contact form.
         </p>
     </div>
 
     <!-- Footer -->
     <div class="footer">
         <div class="footer-line1">
-            © 2026 PrecisionSheets • High-precision tools for serious finance teams
-            <span style="margin-left: 20px; opacity: 0.6">•</span>
+            High-precision tools for serious finance teams
+        </div>
+        <div class="footer-line2">
             <a href="#impressum" onclick="document.getElementById('impressum').style.display = 'block'; return false;" style="color: #d4af77; text-decoration: none;">Legal disclosure</a>
-            <span style="margin-left: 8px; opacity: 0.6">•</span>
+            <span style="margin: 0 12px; opacity: 0.6">•</span>
             <a href="contact.html" style="color: #d4af77; text-decoration: none;">Contact</a>
+        </div>
+        <div class="footer-line3" style="margin-top: 12px; font-size: 0.9rem; opacity: 0.6;">
+            Copyright © 2026 PrecisionSheets • All rights reserved.
         </div>
     </div>
 
