@@ -5,233 +5,276 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>PrecisionSheets | Professional Excel Templates for FP&A</title>
-    <meta name="description" content="Professional Excel templates and dashboards for FP&A professionals, controllers, and finance teams. Clean, ready-to-use tools that save time and deliver clear insights.">
-    
-    <!-- Canonical & Robots -->
-    <link rel="canonical" href="https://precisionsheets.info">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="PrecisionSheets | Professional Excel Templates for FP&A">
-    <meta property="og:description" content="Professional Excel templates and dashboards for FP&A professionals, controllers, and finance teams. Clean, ready-to-use tools that save time and deliver clear insights.">
-    <meta property="og:url" content="https://precisionsheets.info">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo.jpg">
-    <meta property="og:site_name" content="PrecisionSheets">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PrecisionSheets | Professional Excel Templates for FP&A">
-    <meta name="twitter:description" content="Professional Excel templates and dashboards for FP&A professionals, controllers, and finance teams. Clean, ready-to-use tools that save time and deliver clear insights.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo.jpg">
-    
+    <title>PrecisionSheets • Precision Excel templates & dashboards for FP&A professionals</title>
+    <meta name="description" content="High-signal spreadsheets and dashboards for FP&A professionals who value clarity and precision.">
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo.jpg" as="image" type="image/jpeg" fetchpriority="high">
-    <link rel="icon" href="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo.jpg" type="image/jpeg">
-    
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/theprinceecho/theprinceecho/main/favicon.png">
+   
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-        
+       
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background: #081c33;
-            color: #ffffff;
-            min-height: 100vh;
+        body { font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; overflow-x: hidden; }
+        
+        .nav { position: fixed; top: 0; left: 0; right: 0; height: 60px; background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: space-between; padding: 0 24px; z-index: 100; }
+        .nav-logo { height: 32px; cursor: pointer; border-radius: 8px; overflow: hidden; border: 2px solid rgba(212,175,119,0.4); }
+        .nav-links { display: flex; align-items: center; gap: 32px; font-size: 0.95rem; }
+        .nav-links a { 
+            color: #ffffff; 
+            text-decoration: none; 
+            font-weight: 500; 
+            position: relative; 
+            padding-bottom: 6px;
+            transition: color 0.2s ease;
         }
-        nav {
-            position: fixed;
-            top: 0;
+        .nav-links a.active { color: #d4af77; }
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
             left: 0;
-            right: 0;
-            height: 70px;
-            background: rgba(8, 28, 51, 0.95);
-            backdrop-filter: blur(12px);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 40px;
-            z-index: 100;
+            width: 100%;
+            height: 2px;
+            background: #d4af77;
+            opacity: 0.9;
         }
-        .nav-logo {
-            height: 42px;
+       
+        .language-switcher { position: relative; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+        .current-lang { display: flex; align-items: center; gap: 6px; font-size: 0.95rem; font-weight: 600; color: #ffffff; }
+        .language-dropdown { position: absolute; top: 100%; right: 0; background: #111111; border: 1px solid rgba(212,175,119,0.3); border-radius: 8px; padding: 8px 0; margin-top: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); display: none; flex-direction: column; min-width: 140px; }
+        .language-dropdown.show { display: flex; }
+        .language-option { padding: 10px 16px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: #d4af77; text-decoration: none; }
+        .language-option:hover, .language-option:active { background: rgba(212,175,119,0.15); }
+
+        .section { padding: 100px 24px 80px; width: 100%; }
+        
+        #home { background: #0a1628; }
+        #about { background: #11253a; }
+        #products { background: #0a1628; }
+        
+        .hero-content, .products-content { 
+            max-width: 720px; 
+            margin: 0 auto; 
+            text-align: center; 
         }
-        .nav-links {
-            display: flex;
-            gap: 40px;
+        
+        .logo { width: 320px; height: 320px; border-radius: 24px; margin: 0 auto 24px; display: block; object-fit: contain; border: 3px solid rgba(212,175,119,0.6); }
+
+        h1 { font-size: 2.8rem; margin-bottom: 12px; letter-spacing: -1.4px; color: #d4af77; }
+        .subtitle { font-size: 1.2rem; opacity: 0.92; margin-bottom: 40px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.5; color: #ffffff; }
+
+        .button { 
+            display: flex; align-items: center; justify-content: center; gap: 12px; width: 280px; height: 62px; 
+            margin: 12px auto; padding: 0 32px; background: rgba(212,175,119,0.08); color: #d4af77; 
+            border-radius: 9999px; text-decoration: none; font-weight: 500; font-size: 1.12rem; 
+            border: 1px solid rgba(212,175,119,0.4); transition: all 0.3s ease; 
+        }
+        .button:hover { background: rgba(212,175,119,0.15); transform: translateY(-2px); }
+
+        .about-container { 
+            max-width: 1280px; 
+            margin: 0 auto; 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 80px; 
+            align-items: start; 
+        }
+        .threshold-left { text-align: left; }
+        .threshold-left h1 { font-size: 2.8rem; letter-spacing: -1.4px; color: #d4af77; margin-bottom: 16px; }
+        .threshold-left .subtitle { font-size: 1.25rem; opacity: 0.95; margin-bottom: 32px; text-align: left; max-width: none; color: #d4af77; }
+        .threshold-left p { text-align: left; max-width: none; line-height: 1.65; margin-bottom: 28px; font-size: 1.05rem; color: #e0e0e0; }
+        .threshold-left hr { border: none; height: 1px; background: rgba(212,175,119,0.25); margin: 48px 0; }
+
+        .where-to-find h3 { font-size: 1.1rem; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.75; margin-bottom: 24px; color: #d4af77; }
+        
+        .find-card { background: #0a1628; border-radius: 16px; padding: 28px 32px; margin-bottom: 24px; transition: all 0.3s ease; border: 1px solid rgba(212,175,119,0.2); }
+        .find-card:hover { transform: translateY(-4px); border-color: rgba(212,175,119,0.5); }
+        .find-card .icon { width: 42px; height: 42px; background: #d4af77; color: #050505; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 20px; }
+        .find-card h4 { font-size: 1.35rem; margin-bottom: 8px; color: #d4af77; }
+        .find-card p { text-align: left; line-height: 1.6; margin-bottom: 20px; opacity: 0.9; color: #e0e0e0; }
+        .find-card a { color: #d4af77; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
+
+        /* Products & Services – white font + center-aligned justified paragraphs */
+        .products-content {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .products-content p {
+            color: #ffffff;               /* white font */
+            text-align: justify;          /* justified */
+            margin-bottom: 28px;
+            line-height: 1.65;
             font-size: 1.05rem;
         }
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .nav-links a:hover {
-            color: #d4af77;
-        }
-        .main-content {
-            padding-top: 140px;
-            text-align: center;
-        }
-        .logo {
-            width: 260px;
-            height: 260px;
-            margin-bottom: 40px;
-            border-radius: 20px;
-            box-shadow: 0 0 70px rgba(212, 175, 119, 0.6);
-        }
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 12px;
-        }
-        .subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 460px;
-            margin: 0 auto 50px;
-        }
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: rgba(212, 175, 119, 0.1);
-            color: #ffffff;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            text-decoration: none;
-            margin: 12px;
-            transition: all 0.3s;
-            border: 1px solid rgba(212, 175, 119, 0.3);
-            min-width: 220px;
-        }
-        .button:hover {
-            background: rgba(212, 175, 119, 0.2);
-            transform: translateY(-3px);
-        }
-        .about-section {
-            padding: 120px 40px;
-            background: #0a2540;
-            text-align: center;
-        }
-        .about-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 24px;
-            color: #d4af77;
-        }
-        .about-text {
+        .products-content ul {
             max-width: 720px;
-            margin: 0 auto 40px;
-            font-size: 1.15rem;
-            line-height: 1.75;
-            opacity: 0.95;
-            text-align: justify; /* justified text as requested */
+            margin: 0 auto 32px;
+            padding-left: 22px;
+            text-align: left;             /* bullets stay left-aligned */
+            list-style-position: outside;
         }
+        .products-content ul li {
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .about-container { grid-template-columns: 1fr; gap: 60px; }
+            .threshold-left h1, .threshold-left .subtitle { text-align: center; }
+            .threshold-left p { text-align: justify; }
+        }
+
         .footer {
-            margin-top: 80px;
-            padding: 40px 40px 30px;
-            font-size: 0.95rem;
-            opacity: 0.75;
+            margin-top: 0;
+            padding-top: 60px;
+            padding-bottom: 70px;
             text-align: center;
-            border-top: 1px solid rgba(212, 175, 119, 0.1);
+            font-size: 0.9rem;
+            color: #ffffff;
+            opacity: 0.85;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            line-height: 1.8;
+            background: #11253a;
         }
-        .footer-line1 {
-            margin-bottom: 8px;
-        }
-        .footer-line2 {
-            margin-bottom: 8px;
-        }
-        #impressum {
-            display: none;
-            padding: 80px 40px;
-            background: #0a2540;
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        
-        /* Mobile-first refinements */
-        @media (max-width: 480px) {
-            .logo { width: 220px; height: 220px; }
-            h1 { font-size: 2.4rem; }
-            .button { width: 100%; max-width: 260px; }
-            .nav-links { gap: 24px; }
-        }
+        .footer a { color: #ffffff !important; text-decoration: none; }
+        .footer-line1 { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .copyright { font-size: 0.85rem; opacity: 0.7; margin-top: 8px; }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#home">
-            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo.jpg" alt="PrecisionSheets" class="nav-logo">
-        </a>
+    <nav class="nav">
+        <a href="#home"><img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="nav-logo"></a>
         <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#products" class="nav-link" data-section="products">Products & Services</a>
+            <div class="language-switcher" id="language-switcher">
+                <span class="current-lang" id="current-lang-display">🇺🇸 <strong>US</strong></span>
+                <div class="language-dropdown" id="language-dropdown">
+                    <a href="#" class="language-option" data-lang="en">🇺🇸 US</a>
+                    <a href="#" class="language-option" data-lang="de">🇩🇪 DE</a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <div class="main-content" id="home">
-        <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo.jpg" alt="PrecisionSheets" class="logo">
-
-        <h1>PrecisionSheets</h1>
-        <p class="subtitle">Precision Excel templates &amp; dashboards for FP&amp;A professionals</p>
-
-        <a href="https://precisionsheets.gumroad.com" target="_blank" class="button">
-            Browse Templates
-        </a>
-        <a href="https://x.com/precisionsheets" target="_blank" class="button">
-            Follow on X
-        </a>
-    </div>
-
-    <div class="about-section" id="about">
-        <h2>About PrecisionSheets</h2>
-        <p class="about-text">
-            We create clean, professional, and highly automated Excel templates and dashboards 
-            specifically designed for FP&amp;A teams, controllers, and finance professionals.<br><br>
-            
-            Save hours every month with ready-to-use tools that deliver clear variance analysis, 
-            rolling forecasts, cash flow models, KPI dashboards, and more. The store is being 
-            regularly expanded with new high-quality templates tailored to real-world finance needs.<br><br>
-            
-            Should you require a customized version of any template available in the store 
-            or need a bespoke Excel tool built to your specific requirements, please do not 
-            hesitate to reach out via the contact form.
-        </p>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <div class="footer-line1">
-            High-precision tools for serious finance teams
+    <section id="home" class="section">
+        <div class="hero-content">
+            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="logo">
+            <h1>PrecisionSheets</h1>
+            <p class="subtitle">
+                Precision Excel templates & dashboards for FP&A professionals.
+            </p>
+            <a href="https://x.com/theprinceecho" target="_blank" class="button">Follow on X</a>
+            <a href="https://gumroad.com" target="_blank" class="button">Explore Templates</a>
         </div>
-        <div class="footer-line2">
-            <a href="#impressum" onclick="document.getElementById('impressum').style.display = 'block'; return false;" style="color: #d4af77; text-decoration: none;">Legal disclosure</a>
-            <span style="margin: 0 12px; opacity: 0.6">•</span>
-            <a href="contact.html" style="color: #d4af77; text-decoration: none;">Contact</a>
-        </div>
-        <div class="footer-line3" style="margin-top: 12px; font-size: 0.9rem; opacity: 0.6;">
-            Copyright © 2026 PrecisionSheets • All rights reserved.
-        </div>
-    </div>
-
-    <!-- Impressum / Legal Disclosure -->
-    <section id="impressum" class="section" style="display:none; padding:80px 40px; background:#0a2540; max-width:700px; margin:0 auto; text-align:left;">
-        <h2>Legal disclosure</h2>
-        <br>
-        <p><strong>Disclosure according to § 5 DDG (ex TMG)</strong></p>
-        <br>
-        <p>Jens Friedrich<br>
-        c/o SCHUTZADRESSE.COM #535<br>
-        Waidmannsluster Damm 1<br>
-        13507 Berlin</p>
-        <p><strong>Contact:</strong><br>
-        E-Mail: info@precisionsheets.info</p>
     </section>
 
+    <section id="about" class="section">
+        <div class="about-container">
+            <div class="threshold-left">
+                <h1>The Standard</h1>
+                <p class="subtitle">High-signal spreadsheets for those who value precision.</p>
+                <p>You have entered a space where noise falls away and clarity remains.</p>
+                <p>PrecisionSheets delivers calm, sovereign tools — clean financial models, professional templates, and structured frameworks that support long-term decision making without complexity.</p>
+                <hr>
+                <p>If you value clarity over clutter and precision over haste, you are in the right place.</p>
+            </div>
+            <div class="where-to-find">
+                <h3>WHERE TO FIND WHAT</h3>
+                <div class="find-card">
+                    <div class="icon">𝕏</div>
+                    <h4>On X</h4>
+                    <p>Sharp observations and updates on new templates and financial modeling approaches.</p>
+                    <a href="https://x.com/theprinceecho">Follow on X →</a>
+                </div>
+                <div class="find-card">
+                    <div class="icon">🛒</div>
+                    <h4>Gumroad Shop</h4>
+                    <p>Professional Excel templates and financial models ready for immediate use.</p>
+                    <a href="https://gumroad.com">Browse the collection →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="section">
+        <div class="products-content">
+            <h1>Products and Services</h1>
+            <p>We provide ready-to-use Excel-based finance tools that deliver clear variance analysis, rolling forecasts, cash flow models, KPI dashboards and more.</p>
+            <p>Our store is being regularly expanded with new high-quality templates tailored to real-world finance needs.</p>
+            
+            <hr style="max-width: 720px; margin: 48px auto; border: none; height: 1px; background: rgba(212,175,119,0.25);">
+            
+            <p><strong>Enterprise & Custom Editions:</strong> The base version of our tool are designed to deliver professional results for most users and organizations.</p>
+            <p>For larger-scale needs, advanced functionality, or highly specific requirements, we offer Enterprise and Custom Editions.</p>
+            <p>Common extensions include:</p>
+            
+            <ul>
+                <li>Significantly increased capacity</li>
+                <li>Multi-currency support</li>
+                <li>Automated data import & integration options</li>
+                <li>Custom branding and additional reporting modules</li>
+                <li>Tailored features specific to your business</li>
+            </ul>
+            
+            <p>All enterprise and custom versions are priced individually based on scope and complexity.</p>
+            <p>If you have special requirements, feel free to reach out — we are happy to create a solution that fits your exact needs.</p>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="footer-line1">
+            <span>High-precision tools for serious finance teams</span>
+        </div>
+        <div>
+            <a href="legal.html">Legal disclosure</a>
+            <span style="margin:0 12px;opacity:0.6">•</span>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="copyright">Copyright © 2026 PrecisionSheets • All rights reserved.</div>
+    </div>
+
+    <script>
+        function initLanguageSwitcher() {
+            const switcher = document.getElementById('language-switcher');
+            const dropdown = document.getElementById('language-dropdown');
+            if (!switcher) return;
+            switcher.addEventListener('click', () => dropdown.classList.toggle('show'));
+            document.addEventListener('click', () => dropdown.classList.remove('show'));
+        }
+
+        function initActiveNav() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const homeSection = document.getElementById('home');
+            const aboutSection = document.getElementById('about');
+            const productsSection = document.getElementById('products');
+
+            function setActiveNav() {
+                const scrollY = window.scrollY + 120;
+                navLinks.forEach(link => link.classList.remove('active'));
+                if (scrollY < aboutSection.offsetTop) {
+                    document.querySelector('[data-section="home"]').classList.add('active');
+                } else if (scrollY < productsSection.offsetTop) {
+                    document.querySelector('[data-section="about"]').classList.add('active');
+                } else {
+                    document.querySelector('[data-section="products"]').classList.add('active');
+                }
+            }
+
+            window.addEventListener('scroll', setActiveNav);
+            setActiveNav();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initLanguageSwitcher();
+            initActiveNav();
+        });
+    </script>
 </body>
 </html>
