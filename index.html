@@ -9,13 +9,22 @@
     <meta name="description" content="High-signal spreadsheets and dashboards for FP&A professionals who value clarity and precision.">
    
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/theprinceecho/theprinceecho/main/favicon.png">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg">
    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
        
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', system-ui, sans-serif; min-height: 100vh; overflow-x: hidden; }
+        body { 
+            font-family: 'Inter', system-ui, sans-serif; 
+            min-height: 100vh; 
+            overflow-x: hidden; 
+            background: #0a1628;
+            background-image: 
+                linear-gradient(rgba(212,175,119,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212,175,119,0.025) 1px, transparent 1px);
+            background-size: 100% 32px, 100% 100%;
+        }
         
         .nav { position: fixed; top: 0; left: 0; right: 0; height: 60px; background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: space-between; padding: 0 24px; z-index: 100; }
         .nav-logo { height: 32px; cursor: pointer; border-radius: 8px; overflow: hidden; border: 2px solid rgba(212,175,119,0.4); }
@@ -95,15 +104,9 @@
         .find-card p { text-align: left; line-height: 1.6; margin-bottom: 20px; opacity: 0.9; color: #e0e0e0; }
         .find-card a { color: #d4af77; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
 
-        /* Products & Services – white font + center-aligned justified paragraphs */
-        .products-content {
-            max-width: 720px;
-            margin: 0 auto;
-            text-align: center;
-        }
         .products-content p {
-            color: #ffffff;               /* white font */
-            text-align: justify;          /* justified */
+            color: #ffffff;
+            text-align: justify;
             margin-bottom: 28px;
             line-height: 1.65;
             font-size: 1.05rem;
@@ -112,7 +115,7 @@
             max-width: 720px;
             margin: 0 auto 32px;
             padding-left: 22px;
-            text-align: left;             /* bullets stay left-aligned */
+            text-align: left;
             list-style-position: outside;
         }
         .products-content ul li {
@@ -124,6 +127,25 @@
             .about-container { grid-template-columns: 1fr; gap: 60px; }
             .threshold-left h1, .threshold-left .subtitle { text-align: center; }
             .threshold-left p { text-align: justify; }
+
+            /* Mobile header refinements */
+            .nav {
+                padding: 0 16px;
+                height: 56px;
+            }
+            .nav-logo {
+                height: 28px;
+            }
+            .nav-links {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+            .nav-links a {
+                padding-bottom: 4px;
+            }
+            .current-lang {
+                font-size: 0.9rem;
+            }
         }
 
         .footer {
@@ -171,7 +193,7 @@
                 Precision Excel templates & dashboards for FP&A professionals.
             </p>
             <a href="https://x.com/theprinceecho" target="_blank" class="button">Follow on X</a>
-            <a href="https://gumroad.com" target="_blank" class="button">Explore Templates</a>
+            <a href="https://shop.precisionsheets.info/" target="_blank" class="button">Explore Templates</a>
         </div>
     </section>
 
@@ -191,13 +213,13 @@
                     <div class="icon">𝕏</div>
                     <h4>On X</h4>
                     <p>Sharp observations and updates on new templates and financial modeling approaches.</p>
-                    <a href="https://x.com/theprinceecho">Follow on X →</a>
+                    <a href="https://x.com/precisionsheets">Follow on X →</a>
                 </div>
                 <div class="find-card">
                     <div class="icon">🛒</div>
                     <h4>Gumroad Shop</h4>
                     <p>Professional Excel templates and financial models ready for immediate use.</p>
-                    <a href="https://gumroad.com">Browse the collection →</a>
+                    <a href="https://shop.precisionsheets.info/">Browse the collection →</a>
                 </div>
             </div>
         </div>
