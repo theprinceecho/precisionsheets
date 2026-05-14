@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -167,3 +169,143 @@
         .copyright { font-size: 0.85rem; opacity: 0.7; margin-top: 8px; }
     </style>
 </head>
+<body>
+    <nav class="nav">
+        <a href="#home"><img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="nav-logo"></a>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#products" class="nav-link" data-section="products">Products & Services</a>
+            <div class="language-switcher" id="language-switcher">
+                <span class="current-lang" id="current-lang-display">🇺🇸 <strong>US</strong></span>
+                <div class="language-dropdown" id="language-dropdown">
+                    <a href="#" class="language-option" data-lang="en">🇺🇸 US</a>
+                    <a href="#" class="language-option" data-lang="de">🇩🇪 DE</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="section">
+        <div class="hero-content">
+            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="logo">
+            <h1>PrecisionSheets — High-Signal Excel Tools for Finance Professionals</h1>
+            <p class="subtitle">
+                Precision Excel templates & dashboards for FP&A professionals.
+            </p>
+            <a href="https://x.com/precisionsheets" target="_blank" class="button">Follow on 𝕏</a>
+            <a href="https://shop.precisionsheets.info/" target="_blank" class="button">Explore Templates</a>
+        </div>
+    </section>
+
+    <div style="max-width: 720px; margin: 0 auto; border-top: 1px solid rgba(212,175,119,0.25);"></div>
+
+    <section id="about" class="section">
+        <div class="about-container">
+            <div class="threshold-left">
+                <h1>The Standard</h1>
+                <p class="subtitle">High-signal spreadsheets for those who value precision.</p>
+                <p>You have entered a space where noise falls away and clarity remains.</p>
+                <p>PrecisionSheets delivers calm, sovereign tools — clean financial models, professional templates, and structured frameworks that support long-term decision making without complexity.</p>
+                <hr>
+                <p>If you value clarity over clutter and precision over haste, you are in the right place.</p>
+            </div>
+            <div class="where-to-find">
+                <h3>WHERE TO FIND WHAT</h3>
+                <div class="find-card">
+                    <div class="icon">𝕏</div>
+                    <h4>On X</h4>
+                    <p>Sharp observations and updates on new templates and financial modeling approaches.</p>
+                    <a href="https://x.com/precisionsheets">Follow on X →</a>
+                </div>
+                <div class="find-card">
+                    <div class="icon">🛒</div>
+                    <h4>Gumroad Shop</h4>
+                    <p>Professional Excel templates and financial models ready for immediate use.</p>
+                    <a href="https://shop.precisionsheets.info/">Browse the collection →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="max-width: 720px; margin: 0 auto; border-top: 1px solid rgba(212,175,119,0.25);"></div>
+
+    <section id="products" class="section">
+        <div class="products-content">
+            <h1>Products and Services</h1>
+            <p>We provide ready-to-use Excel-based finance tools that deliver clear variance analysis, rolling forecasts, cash flow models, KPI dashboards and more.</p>
+            <p>Our store is being regularly expanded with new high-quality templates tailored to real-world finance needs.</p>
+            
+            <hr style="max-width: 720px; margin: 48px auto; border: none; height: 1px; background: rgba(212,175,119,0.25);">
+            
+            <p><strong>Enterprise & Custom Editions:</strong> The base version of our tool are designed to deliver professional results for most users and organizations.</p>
+            <p>For larger-scale needs, advanced functionality, or highly specific requirements, we offer Enterprise and Custom Editions.</p>
+            <p>Common extensions include:</p>
+            
+            <ul>
+                <li>Significantly increased capacity</li>
+                <li>Multi-currency support</li>
+                <li>Automated data import & integration options</li>
+                <li>Custom branding and additional reporting modules</li>
+                <li>Tailored features specific to your business</li>
+            </ul>
+            
+            <div style="max-width: 720px; margin: 48px auto 32px; border-top: 1px solid rgba(212,175,119,0.25);"></div>
+            
+            <p>All enterprise and custom versions are priced individually based on scope and complexity.</p>
+            <p>If you have special requirements, feel free to reach out — we are happy to create a solution that fits your exact needs.</p>
+        </div>
+    </section>
+
+    <div style="max-width: 720px; margin: 40px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
+
+    <div class="footer">
+        <div class="footer-line1">
+            <span>High-precision tools for serious finance teams</span>
+        </div>
+        <div>
+            <a href="legal.html">Legal disclosure</a>
+            <span style="margin:0 12px;opacity:0.6">•</span>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="copyright">Copyright © 2026 PrecisionSheets • All rights reserved.</div>
+    </div>
+
+    <script>
+        function initLanguageSwitcher() {
+            const switcher = document.getElementById('language-switcher');
+            const dropdown = document.getElementById('language-dropdown');
+            if (!switcher) return;
+            switcher.addEventListener('click', () => dropdown.classList.toggle('show'));
+            document.addEventListener('click', () => dropdown.classList.remove('show'));
+        }
+
+        function initActiveNav() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const homeSection = document.getElementById('home');
+            const aboutSection = document.getElementById('about');
+            const productsSection = document.getElementById('products');
+
+            function setActiveNav() {
+                const scrollY = window.scrollY + 120;
+                navLinks.forEach(link => link.classList.remove('active'));
+                if (scrollY < aboutSection.offsetTop) {
+                    document.querySelector('[data-section="home"]').classList.add('active');
+                } else if (scrollY < productsSection.offsetTop) {
+                    document.querySelector('[data-section="about"]').classList.add('active');
+                } else {
+                    document.querySelector('[data-section="products"]').classList.add('active');
+                }
+            }
+
+            window.addEventListener('scroll', setActiveNav);
+            setActiveNav();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initLanguageSwitcher();
+            initActiveNav();
+        });
+    </script>
+</body>
+</html>
