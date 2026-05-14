@@ -7,10 +7,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>PrecisionSheets • Precision Excel templates & dashboards for FP&A professionals</title>
     <meta name="description" content="High-signal spreadsheets and dashboards for FP&A professionals who value clarity and precision.">
-   
+    <link rel="canonical" href="https://precisionsheets.info/" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg">
-   
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
        
@@ -100,163 +99,134 @@
         .find-card { background: #0a1628; border-radius: 16px; padding: 28px 32px; margin-bottom: 24px; transition: all 0.3s ease; border: 1px solid rgba(212,175,119,0.2); }
         .find-card:hover { transform: translateY(-4px); border-color: rgba(212,175,119,0.5); }
         .find-card .icon { width: 42px; height: 42px; background: #d4af77; color: #050505; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 20px; }
-        .find-card h4 { font-size: 1.35rem; margin-bottom: 8px; color: #d4af77; }
-        .find-card p { text-align: left; line-height: 1.6; margin-bottom: 20px; opacity: 0.9; color: #e0e0e0; }
-        .find-card a { color: #d4af77; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
+        .find-card h4 { font-size: 1.15rem; margin-bottom: 8px; color: #d4af77; }
+        .find-card p { font-size: 0.95rem; line-height: 1.6; color: #e0e0e0; }
 
-        .products-content p {
-            color: #ffffff;
-            text-align: justify;
-            margin-bottom: 28px;
-            line-height: 1.65;
-            font-size: 1.05rem;
+        .products-grid { 
+            max-width: 1280px; 
+            margin: 0 auto; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 32px; 
         }
-        .products-content ul {
-            max-width: 720px;
-            margin: 0 auto 32px;
-            padding-left: 22px;
-            text-align: left;
-            list-style-position: outside;
+        .product-card { 
+            background: #0a1628; 
+            border: 1px solid rgba(212,175,119,0.15); 
+            border-radius: 20px; 
+            padding: 40px 36px; 
+            transition: all 0.3s ease; 
         }
-        .products-content ul li {
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
+        .product-card:hover { transform: translateY(-6px); border-color: rgba(212,175,119,0.4); }
+        .product-card h3 { font-size: 1.35rem; margin-bottom: 16px; color: #d4af77; }
+        .product-card p { font-size: 1rem; line-height: 1.65; color: #e0e0e0; margin-bottom: 24px; }
+        .product-card .price { font-size: 1.05rem; font-weight: 600; color: #d4af77; }
 
-        @media (max-width: 768px) {
-            .about-container { grid-template-columns: 1fr; gap: 60px; }
-            .threshold-left h1, .threshold-left .subtitle { text-align: center; }
-            .threshold-left p { text-align: justify; }
-
-            /* Mobile header refinements */
-            .nav {
-                padding: 0 16px;
-                height: 56px;
-            }
-            .nav-logo {
-                height: 28px;
-            }
-            .nav-links {
-                gap: 16px;
-                font-size: 0.9rem;
-            }
-            .nav-links a {
-                padding-bottom: 4px;
-            }
-            .current-lang {
-                font-size: 0.9rem;
-            }
-        }
-
-        .footer {
-            margin-top: 0;
-            padding-top: 60px;
-            padding-bottom: 70px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #ffffff;
-            opacity: 0.85;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-            line-height: 1.8;
-            background: #11253a;
+        .footer { 
+            background: #11253a; 
+            padding: 60px 24px 40px; 
+            text-align: center; 
+            font-size: 0.9rem; 
+            color: #ffffff; 
+            opacity: 0.85; 
         }
         .footer a { color: #ffffff !important; text-decoration: none; }
         .footer-line1 { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center; }
-        .copyright { font-size: 0.85rem; opacity: 0.7; margin-top: 8px; }
+        .copyright { font-size: 0.85rem; opacity: 0.7; margin-top: 20px; }
     </style>
 </head>
 <body>
     <nav class="nav">
-        <a href="#home"><img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="nav-logo"></a>
+        <a href="index.html">
+            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="nav-logo">
+        </a>
         <div class="nav-links">
-            <a href="#home" class="nav-link active" data-section="home">Home</a>
-            <a href="#about" class="nav-link" data-section="about">About</a>
-            <a href="#products" class="nav-link" data-section="products">Products & Services</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#products">Products & Services</a>
+           
             <div class="language-switcher" id="language-switcher">
-                <span class="current-lang" id="current-lang-display">🇺🇸 <strong>US</strong></span>
+                <span class="current-lang" id="current-lang-display">US <strong>US</strong></span>
                 <div class="language-dropdown" id="language-dropdown">
-                    <a href="#" class="language-option" data-lang="en">🇺🇸 US</a>
-                    <a href="#" class="language-option" data-lang="de">🇩🇪 DE</a>
+                    <a href="#" class="language-option" data-lang="en">US US</a>
+                    <a href="#" class="language-option" data-lang="de">DE DE</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="section">
+    <div id="home" class="section">
         <div class="hero-content">
-            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="logo">
-            <h1>PrecisionSheets — High-Signal Excel Tools for Finance Professionals</h1>
-            <p class="subtitle">
-                Precision Excel templates & dashboards for FP&A professionals.
-            </p>
-            <a href="https://x.com/precisionsheets" target="_blank" class="button">Follow on 𝕏</a>
-            <a href="https://shop.precisionsheets.info/" target="_blank" class="button">Explore Templates</a>
+            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets Logo" class="logo">
+            <h1>PrecisionSheets</h1>
+            <p class="subtitle">High-signal spreadsheets and dashboards for FP&A professionals who value clarity and precision.</p>
+            
+            <a href="https://shop.precisionsheets.info" class="button">
+                Browse Templates
+            </a>
+            <a href="#about" class="button">
+                Learn More
+            </a>
         </div>
-    </section>
+    </div>
 
-    <div style="max-width: 720px; margin: 0 auto; border-top: 1px solid rgba(212,175,119,0.25);"></div>
-
-    <section id="about" class="section">
+    <div id="about" class="section">
         <div class="about-container">
             <div class="threshold-left">
-                <h1>The Standard</h1>
-                <p class="subtitle">High-signal spreadsheets for those who value precision.</p>
-                <p>You have entered a space where noise falls away and clarity remains.</p>
-                <p>PrecisionSheets delivers calm, sovereign tools — clean financial models, professional templates, and structured frameworks that support long-term decision making without complexity.</p>
+                <h1>The Threshold</h1>
+                <p class="subtitle">We believe financial tools should be as precise as the decisions they support.</p>
+                <p>PrecisionSheets was born from a simple observation: most financial templates are either too basic or overly complex. We build the missing middle — clean, powerful, and ready for serious work.</p>
                 <hr>
-                <p>If you value clarity over clutter and precision over haste, you are in the right place.</p>
+                <p>Every template is designed with one goal: to give you back time and clarity.</p>
             </div>
             <div class="where-to-find">
                 <h3>WHERE TO FIND WHAT</h3>
                 <div class="find-card">
-                    <div class="icon">𝕏</div>
-                    <h4>On X</h4>
-                    <p>Sharp observations and updates on new templates and financial modeling approaches.</p>
-                    <a href="https://x.com/precisionsheets">Follow on X →</a>
+                    <div class="icon">✓</div>
+                    <h4>Shop</h4>
+                    <p>Ready-to-use Excel templates for P&L, Cash Flow, NWC, and more.</p>
                 </div>
                 <div class="find-card">
-                    <div class="icon">🛒</div>
-                    <h4>Gumroad Shop</h4>
-                    <p>Professional Excel templates and financial models ready for immediate use.</p>
-                    <a href="https://shop.precisionsheets.info/">Browse the collection →</a>
+                    <div class="icon">✓</div>
+                    <h4>Custom Work</h4>
+                    <p>Tailored dashboards and planning models for your specific needs.</p>
+                </div>
+                <div class="find-card">
+                    <div class="icon">✓</div>
+                    <h4>Consulting</h4>
+                    <p>FP&A process optimization and template architecture.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <div style="max-width: 720px; margin: 0 auto; border-top: 1px solid rgba(212,175,119,0.25);"></div>
-
-    <section id="products" class="section">
+    <div id="products" class="section">
         <div class="products-content">
-            <h1>Products and Services</h1>
-            <p>We provide ready-to-use Excel-based finance tools that deliver clear variance analysis, rolling forecasts, cash flow models, KPI dashboards and more.</p>
-            <p>Our store is being regularly expanded with new high-quality templates tailored to real-world finance needs.</p>
+            <h2 style="font-size: 2.2rem; margin-bottom: 16px; color: #d4af77;">Featured Templates</h2>
+            <p style="max-width: 520px; margin: 0 auto 48px; font-size: 1.1rem; color: #e0e0e0;">Professional-grade tools used by finance teams who refuse to compromise on quality.</p>
             
-            <hr style="max-width: 720px; margin: 48px auto; border: none; height: 1px; background: rgba(212,175,119,0.25);">
+            <div class="products-grid">
+                <div class="product-card">
+                    <h3>P&L Analysis & Variance Dashboard</h3>
+                    <p>Monthly P&L with variance analysis, trend tracking, and executive summary.</p>
+                    <div class="price">€89</div>
+                </div>
+                <div class="product-card">
+                    <h3>Cash Flow Analysis</h3>
+                    <p>Weekly and monthly cash flow forecasting with scenario planning.</p>
+                    <div class="price">€79</div>
+                </div>
+                <div class="product-card">
+                    <h3>NWC Dashboard</h3>
+                    <p>Net Working Capital tracking and optimization tool.</p>
+                    <div class="price">€69</div>
+                </div>
+            </div>
             
-            <p><strong>Enterprise & Custom Editions:</strong> The base version of our tool are designed to deliver professional results for most users and organizations.</p>
-            <p>For larger-scale needs, advanced functionality, or highly specific requirements, we offer Enterprise and Custom Editions.</p>
-            <p>Common extensions include:</p>
-            
-            <ul>
-                <li>Significantly increased capacity</li>
-                <li>Multi-currency support</li>
-                <li>Automated data import & integration options</li>
-                <li>Custom branding and additional reporting modules</li>
-                <li>Tailored features specific to your business</li>
-            </ul>
-            
-            <div style="max-width: 720px; margin: 48px auto 32px; border-top: 1px solid rgba(212,175,119,0.25);"></div>
-            
-            <p>All enterprise and custom versions are priced individually based on scope and complexity.</p>
-            <p>If you have special requirements, feel free to reach out — we are happy to create a solution that fits your exact needs.</p>
+            <a href="https://shop.precisionsheets.info" class="button" style="margin-top: 48px;">
+                View All Templates
+            </a>
         </div>
-    </section>
-
-    <div style="max-width: 720px; margin: 40px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
+    </div>
 
     <div class="footer">
         <div class="footer-line1">
@@ -269,42 +239,5 @@
         </div>
         <div class="copyright">Copyright © 2026 PrecisionSheets • All rights reserved.</div>
     </div>
-
-    <script>
-        function initLanguageSwitcher() {
-            const switcher = document.getElementById('language-switcher');
-            const dropdown = document.getElementById('language-dropdown');
-            if (!switcher) return;
-            switcher.addEventListener('click', () => dropdown.classList.toggle('show'));
-            document.addEventListener('click', () => dropdown.classList.remove('show'));
-        }
-
-        function initActiveNav() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const homeSection = document.getElementById('home');
-            const aboutSection = document.getElementById('about');
-            const productsSection = document.getElementById('products');
-
-            function setActiveNav() {
-                const scrollY = window.scrollY + 120;
-                navLinks.forEach(link => link.classList.remove('active'));
-                if (scrollY < aboutSection.offsetTop) {
-                    document.querySelector('[data-section="home"]').classList.add('active');
-                } else if (scrollY < productsSection.offsetTop) {
-                    document.querySelector('[data-section="about"]').classList.add('active');
-                } else {
-                    document.querySelector('[data-section="products"]').classList.add('active');
-                }
-            }
-
-            window.addEventListener('scroll', setActiveNav);
-            setActiveNav();
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            initLanguageSwitcher();
-            initActiveNav();
-        });
-    </script>
 </body>
 </html>

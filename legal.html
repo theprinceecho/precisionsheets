@@ -6,7 +6,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Legal Disclosure • PrecisionSheets</title>
-    <meta name="description" content="Legal information for PrecisionSheets.">
+    <meta name="description" content="Legal information for PrecisionSheets. All details about the operator, liability, and terms of use.">
+    <link rel="canonical" href="https://precisionsheets.info/legal" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg">
    
@@ -15,7 +16,7 @@
        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', system_ui, sans-serif;
             background: #0a1628;
             color: #d4af77;
             min-height: 100vh;
@@ -48,7 +49,20 @@
         }
         .language-switcher { position: relative; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
         .current-lang { display: flex; align-items: center; gap: 6px; font-size: 0.95rem; font-weight: 600; color: #ffffff; }
-        .language-dropdown { position: absolute; top: 100%; right: 0; background: #111111; border: 1px solid rgba(212,175,119,0.3); border-radius: 8px; padding: 8px 0; margin-top: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); display: none; flex-direction: column; min-width: 140px; }
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0; 
+            background: #111111;
+            border: 1px solid rgba(212,175,119,0.3);
+            border-radius: 8px;
+            padding: 8px 0;
+            margin-top: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            display: none;
+            flex-direction: column;
+            min-width: 140px;
+        }
         .language-dropdown.show { display: flex; }
         .language-option { padding: 10px 16px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: #d4af77; text-decoration: none; }
         .language-option:hover, .language-option:active { background: rgba(212,175,119,0.15); }
@@ -115,10 +129,10 @@
             <a href="index.html#products">Products & Services</a>
            
             <div class="language-switcher" id="language-switcher">
-                <span class="current-lang" id="current-lang-display">🇺🇸 <strong>US</strong></span>
+                <span class="current-lang" id="current-lang-display">US <strong>US</strong></span>
                 <div class="language-dropdown" id="language-dropdown">
-                    <a href="#" class="language-option" data-lang="en">🇺🇸 US</a>
-                    <a href="#" class="language-option" data-lang="de">🇩🇪 DE</a>
+                    <a href="#" class="language-option" data-lang="en">US US</a>
+                    <a href="#" class="language-option" data-lang="de">DE DE</a>
                 </div>
             </div>
         </div>
@@ -152,7 +166,7 @@
         <p>The content and works created by the site operators on these pages are subject to copyright. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator.</p>
     </div>
 
-    <div style="max-width: 720px; margin: 40px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
+    <div style="max-width: 720px; margin: 40px auto 0; border-top: 1px solid rgba(212,175,119,0.25); "></div>
 
     <div class="footer">
         <div class="footer-line1">
@@ -165,19 +179,5 @@
         </div>
         <div class="copyright">Copyright © 2026 PrecisionSheets • All rights reserved.</div>
     </div>
-
-    <script>
-        function initLanguageSwitcher() {
-            const switcher = document.getElementById('language-switcher');
-            const dropdown = document.getElementById('language-dropdown');
-            if (!switcher) return;
-            switcher.addEventListener('click', () => dropdown.classList.toggle('show'));
-            document.addEventListener('click', () => dropdown.classList.remove('show'));
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            initLanguageSwitcher();
-        });
-    </script>
 </body>
 </html>

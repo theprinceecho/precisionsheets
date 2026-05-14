@@ -6,7 +6,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Contact • PrecisionSheets</title>
-    <meta name="description" content="A direct line for those who value precision.">
+    <meta name="description" content="Get in touch with PrecisionSheets. Questions about Excel templates, FP&A dashboards, or custom solutions? We reply within 24 hours.">
+    <link rel="canonical" href="https://precisionsheets.info/contact" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg">
    
@@ -15,7 +16,7 @@
        
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', system_ui, sans-serif;
             background: #0a1628;
             color: #d4af77;
             min-height: 100vh;
@@ -155,10 +156,10 @@
             <a href="index.html#products">Products & Services</a>
            
             <div class="language-switcher" id="language-switcher">
-                <span class="current-lang" id="current-lang-display">🇺🇸 <strong>US</strong></span>
+                <span class="current-lang" id="current-lang-display">US <strong>US</strong></span>
                 <div class="language-dropdown" id="language-dropdown">
-                    <a href="#" class="language-option" data-lang="en">🇺🇸 US</a>
-                    <a href="#" class="language-option" data-lang="de">🇩🇪 DE</a>
+                    <a href="#" class="language-option" data-lang="en">US US</a>
+                    <a href="#" class="language-option" data-lang="de">DE DE</a>
                 </div>
             </div>
         </div>
@@ -192,19 +193,5 @@
         </div>
         <div class="copyright">Copyright © 2026 PrecisionSheets • All rights reserved.</div>
     </div>
-
-    <script>
-        function initLanguageSwitcher() {
-            const switcher = document.getElementById('language-switcher');
-            const dropdown = document.getElementById('language-dropdown');
-            if (!switcher) return;
-            switcher.addEventListener('click', () => dropdown.classList.toggle('show'));
-            document.addEventListener('click', () => dropdown.classList.remove('show'));
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            initLanguageSwitcher();
-        });
-    </script>
 </body>
 </html>
