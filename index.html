@@ -124,12 +124,41 @@
             margin-bottom: 8px;
         }
 
+        /* New cards for How You Can Work With Us */
+        .work-with-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto 60px;
+        }
+        .work-card {
+            background: #0a1628;
+            border: 1px solid rgba(212,175,119,0.15);
+            border-radius: 16px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+        }
+        .work-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212,175,119,0.4);
+        }
+        .work-card h3 {
+            font-size: 1.25rem;
+            color: #d4af77;
+            margin-bottom: 12px;
+        }
+        .work-card p {
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
         @media (max-width: 768px) {
             .about-container { grid-template-columns: 1fr; gap: 60px; }
             .threshold-left h1, .threshold-left .subtitle { text-align: center; }
             .threshold-left p { text-align: justify; }
 
-            /* Mobile header refinements */
             .nav {
                 padding: 0 16px;
                 height: 56px;
@@ -254,6 +283,26 @@
             
             <p>All enterprise and custom versions are priced individually based on scope and complexity.</p>
             <p>If you have special requirements, feel free to reach out — we are happy to create a solution that fits your exact needs.</p>
+
+            <!-- NEW: How You Can Work With Us Cards -->
+            <div style="max-width: 720px; margin: 56px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
+            
+            <h2 style="text-align: center; margin: 48px 0 32px; color: #d4af77; font-size: 1.85rem;">How You Can Work With Us</h2>
+            
+            <div class="work-with-us-grid">
+                <div class="work-card">
+                    <h3>Ready-to-Use Templates</h3>
+                    <p>Professional Excel tools for P&L, Cash Flow, NWC, and more. Start delivering results immediately.</p>
+                </div>
+                <div class="work-card">
+                    <h3>Custom Development</h3>
+                    <p>Tailored dashboards and planning models built specifically for your processes, data, and reporting needs.</p>
+                </div>
+                <div class="work-card">
+                    <h3>FP&A Advisory</h3>
+                    <p>Process optimization and template architecture support for finance teams that want to level up.</p>
+                </div>
+            </div>
         </div>
     </section>
 
