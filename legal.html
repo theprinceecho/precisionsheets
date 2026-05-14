@@ -46,6 +46,13 @@
             text-decoration: none;
             font-weight: 500;
         }
+        .language-switcher { position: relative; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
+        .current-lang { display: flex; align-items: center; gap: 6px; font-size: 0.95rem; font-weight: 600; color: #ffffff; }
+        .language-dropdown { position: absolute; top: 100%; right: 0; background: #111111; border: 1px solid rgba(212,175,119,0.3); border-radius: 8px; padding: 8px 0; margin-top: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); display: none; flex-direction: column; min-width: 140px; }
+        .language-dropdown.show { display: flex; }
+        .language-option { padding: 10px 16px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: #d4af77; text-decoration: none; }
+        .language-option:hover, .language-option:active { background: rgba(212,175,119,0.15); }
+
         .main-content {
             padding-top: 120px;
             padding-bottom: 100px;
@@ -67,6 +74,16 @@
             line-height: 1.7;
             margin-bottom: 16px;
             color: #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .nav {
+                padding: 0 16px;
+            }
         }
         .footer {
             margin-top: 0;
@@ -97,6 +114,14 @@
             <a href="index.html#about">About</a>
             <a href="index.html#products">Products & Services</a>
             <a href="contact.html">Contact</a>
+           
+            <div class="language-switcher" id="language-switcher">
+                <span class="current-lang" id="current-lang-display">🇺🇸 <strong>US</strong></span>
+                <div class="language-dropdown" id="language-dropdown">
+                    <a href="#" class="language-option" data-lang="en">🇺🇸 US</a>
+                    <a href="#" class="language-option" data-lang="de">🇩🇪 DE</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -141,5 +166,19 @@
         </div>
         <div class="copyright">Copyright © 2026 PrecisionSheets • All rights reserved.</div>
     </div>
+
+    <script>
+        function initLanguageSwitcher() {
+            const switcher = document.getElementById('language-switcher');
+            const dropdown = document.getElementById('language-dropdown');
+            if (!switcher) return;
+            switcher.addEventListener('click', () => dropdown.classList.toggle('show'));
+            document.addEventListener('click', () => dropdown.classList.remove('show'));
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initLanguageSwitcher();
+        });
+    </script>
 </body>
 </html>
