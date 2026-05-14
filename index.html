@@ -154,6 +154,35 @@
             color: #e0e0e0;
         }
 
+        .product-card {
+            background: #0a1628;
+            border: 1px solid rgba(212,175,119,0.15);
+            border-radius: 16px;
+            padding: 28px 24px;
+            transition: all 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212,175,119,0.4);
+        }
+        .product-card h3 {
+            font-size: 1.15rem;
+            color: #d4af77;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .product-card .price {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #d4af77;
+            margin-top: 12px;
+        }
+        .product-card .price small {
+            font-size: 0.85rem;
+            font-weight: 400;
+            opacity: 0.7;
+        }
+
         @media (max-width: 768px) {
             .about-container { grid-template-columns: 1fr; gap: 60px; }
             .threshold-left h1, .threshold-left .subtitle { text-align: center; }
@@ -303,6 +332,48 @@
                     <p>Process optimization and template architecture support for finance teams that want to level up.</p>
                 </div>
             </div>
+
+            <!-- Featured Templates - 4 Cards Only -->
+            <div style="max-width: 720px; margin: 56px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
+            
+            <h2 style="text-align: center; margin: 48px 0 24px; color: #d4af77; font-size: 1.85rem;">Featured Templates</h2>
+            <p style="max-width: 620px; margin: 0 auto 40px; font-size: 1.05rem;">Professional-grade tools used by finance teams who refuse to compromise on quality.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto;">
+                
+                <!-- Card 1: P&L -->
+                <div class="product-card">
+                    <h3>P&L Analysis & Variance Dashboard – CFO Executive View</h3>
+                    <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">Monthly P&L with variance analysis, trend tracking, and executive summary.</p>
+                    <div class="price">€39</div>
+                </div>
+                
+                <!-- Card 2: Cash Flow -->
+                <div class="product-card">
+                    <h3>Cash Flow Analysis & Variance Dashboard – CFO Executive View</h3>
+                    <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">Weekly and monthly cash flow analysis with variance tracking.</p>
+                    <div class="price">€39</div>
+                </div>
+                
+                <!-- Card 3: NWC €99 -->
+                <div class="product-card">
+                    <h3>NWC Dashboard – 12-Month Rolling View – CFO Executive View</h3>
+                    <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">Net Working Capital tracking and optimization tool with rolling forecast.</p>
+                    <div class="price">€99 <small>(Advanced)</small></div>
+                </div>
+                
+                <!-- Card 4: Weekly Cash Forecast €99 -->
+                <div class="product-card">
+                    <h3>Weekly Cash Forecast Tool – 20 Weeks + 4-Week Prediction (CFO Edition)</h3>
+                    <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">Detailed weekly cash forecasting with scenario planning and prediction.</p>
+                    <div class="price">€99 <small>(Advanced)</small></div>
+                </div>
+                
+            </div>
+            
+            <a href="https://shop.precisionsheets.info/" target="_blank" class="button" style="margin-top: 48px;">
+                View All Templates on Gumroad
+            </a>
         </div>
     </section>
 
