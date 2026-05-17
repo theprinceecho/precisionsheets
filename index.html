@@ -8,33 +8,33 @@
     <title>PrecisionSheets • Precision Excel templates & dashboards for FP&A professionals</title>
     <meta name="description" content="High-signal Excel templates and dashboards for FP&A professionals who value clarity, precision, and calm decision-making.">
     <link rel="canonical" href="https://precisionsheets.info/" />
-   
+  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg">
-   
+  
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-       
+      
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Inter', system-ui, sans-serif; 
-            min-height: 100vh; 
-            overflow-x: hidden; 
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
             background: #0a1628;
-            background-image: 
+            background-image:
                 linear-gradient(rgba(212,175,119,0.05) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(212,175,119,0.025) 1px, transparent 1px);
             background-size: 100% 32px, 100% 100%;
         }
-        
+       
         .nav { position: fixed; top: 0; left: 0; right: 0; height: 60px; background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(12px); display: flex; align-items: center; justify-content: space-between; padding: 0 24px; z-index: 100; }
         .nav-logo { height: 32px; cursor: pointer; border-radius: 8px; overflow: hidden; border: 2px solid rgba(212,175,119,0.4); }
         .nav-links { display: flex; align-items: center; gap: 32px; font-size: 0.95rem; }
-        .nav-links a { 
-            color: #ffffff; 
-            text-decoration: none; 
-            font-weight: 500; 
-            position: relative; 
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
             padding-bottom: 6px;
             transition: color 0.2s ease;
         }
@@ -49,62 +49,50 @@
             background: #d4af77;
             opacity: 0.9;
         }
-       
+      
         .language-switcher { position: relative; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent; }
         .current-lang { display: flex; align-items: center; gap: 6px; font-size: 0.95rem; font-weight: 600; color: #ffffff; }
         .language-dropdown { position: absolute; top: 100%; right: 0; background: #111111; border: 1px solid rgba(212,175,119,0.3); border-radius: 8px; padding: 8px 0; margin-top: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); display: none; flex-direction: column; min-width: 140px; }
         .language-dropdown.show { display: flex; }
         .language-option { padding: 10px 16px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: #d4af77; text-decoration: none; }
         .language-option:hover, .language-option:active { background: rgba(212,175,119,0.15); }
-
         .section { padding: 100px 24px 80px; width: 100%; }
-        
+       
         #home { background: #0a1628; }
         #about { background: #11253a; }
         #products { background: #0a1628; }
-        
-        .hero-content, .products-content { 
-            max-width: 720px; 
-            margin: 0 auto; 
-            text-align: center; 
+       
+        .hero-content, .products-content {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
         }
-        
+       
         .logo { width: 320px; height: 320px; border-radius: 24px; margin: 0 auto 24px; display: block; object-fit: contain; border: 3px solid rgba(212,175,119,0.6); }
-
         h1 { font-size: 2.8rem; margin-bottom: 12px; letter-spacing: -1.4px; color: #d4af77; }
         .subtitle { font-size: 1.2rem; opacity: 0.92; margin-bottom: 40px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.5; color: #ffffff; }
-
-        .button { 
-            display: flex; align-items: center; justify-content: center; gap: 12px; width: 280px; height: 62px; 
-            margin: 12px auto; padding: 0 32px; background: rgba(212,175,119,0.08); color: #d4af77; 
-            border-radius: 9999px; text-decoration: none; font-weight: 500; font-size: 1.12rem; 
-            border: 1px solid rgba(212,175,119,0.4); transition: all 0.3s ease; 
-        }
-        .button:hover { background: rgba(212,175,119,0.15); transform: translateY(-2px); }
-
-        .about-container { 
-            max-width: 1280px; 
-            margin: 0 auto; 
-            display: grid; 
-            grid-template-columns: 1fr 1fr; 
-            gap: 80px; 
-            align-items: start; 
+        
+        .about-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
         }
         .threshold-left { text-align: left; }
         .threshold-left h1 { font-size: 2.8rem; letter-spacing: -1.4px; color: #d4af77; margin-bottom: 16px; }
         .threshold-left .subtitle { font-size: 1.25rem; opacity: 0.95; margin-bottom: 32px; text-align: left; max-width: none; color: #d4af77; }
         .threshold-left p { text-align: left; max-width: none; line-height: 1.65; margin-bottom: 28px; font-size: 1.05rem; color: #e0e0e0; }
         .threshold-left hr { border: none; height: 1px; background: rgba(212,175,119,0.25); margin: 48px 0; }
-
         .where-to-find h3 { font-size: 1.1rem; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.75; margin-bottom: 24px; color: #d4af77; }
-        
+       
         .find-card { background: #0a1628; border-radius: 16px; padding: 28px 32px; margin-bottom: 24px; transition: all 0.3s ease; border: 1px solid rgba(212,175,119,0.2); }
         .find-card:hover { transform: translateY(-4px); border-color: rgba(212,175,119,0.5); }
         .find-card .icon { width: 42px; height: 42px; background: #d4af77; color: #050505; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 20px; }
         .find-card h4 { font-size: 1.35rem; margin-bottom: 8px; color: #d4af77; }
         .find-card p { text-align: left; line-height: 1.6; margin-bottom: 20px; opacity: 0.9; color: #e0e0e0; }
         .find-card a { color: #d4af77; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
-
         .products-content p {
             color: #ffffff;
             text-align: justify;
@@ -123,7 +111,6 @@
             color: #ffffff;
             margin-bottom: 8px;
         }
-
         .work-with-us-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -152,7 +139,6 @@
             line-height: 1.6;
             color: #e0e0e0;
         }
-
         .product-card {
             background: #0a1628;
             border: 1px solid rgba(212,175,119,0.15);
@@ -181,12 +167,10 @@
             font-weight: 400;
             opacity: 0.7;
         }
-
         @media (max-width: 768px) {
             .about-container { grid-template-columns: 1fr; gap: 60px; }
             .threshold-left h1, .threshold-left .subtitle { text-align: center; }
             .threshold-left p { text-align: justify; }
-
             .nav {
                 padding: 0 16px;
                 height: 56px;
@@ -205,7 +189,6 @@
                 font-size: 0.9rem;
             }
         }
-
         .footer {
             margin-top: 0;
             padding-top: 60px;
@@ -243,6 +226,7 @@
         </div>
     </nav>
 
+    <!-- Home section – buttons removed + extended spacing -->
     <section id="home" class="section">
         <div class="hero-content">
             <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="logo">
@@ -250,8 +234,8 @@
             <p class="subtitle">
                 Precision Excel templates & dashboards for FP&A professionals.
             </p>
-            <a href="https://x.com/precisionsheets" target="_blank" class="button">Follow on 𝕏</a>
-            <a href="https://shop.precisionsheets.info/" target="_blank" class="button">Explore Templates</a>
+            <!-- Extended spacing -->
+            <div style="height: 160px;"></div>
         </div>
     </section>
 
@@ -275,6 +259,15 @@
                     <p>Sharp observations and updates on new templates and financial modeling approaches.</p>
                     <a href="https://x.com/precisionsheets">Follow on X →</a>
                 </div>
+                <!-- LinkedIn card -->
+                <div class="find-card">
+                    <div class="icon" style="padding:0;">
+                        <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/linkedin.png" alt="LinkedIn" style="width:42px;height:42px;border-radius:50%;display:block;">
+                    </div>
+                    <h4>On LinkedIn</h4>
+                    <p>Professional updates and insights for finance professionals.</p>
+                    <a href="https://www.linkedin.com/company/precisionsheets" target="_blank">Follow on LinkedIn →</a>
+                </div>
                 <div class="find-card">
                     <div class="icon">🛒</div>
                     <h4>Gumroad Shop</h4>
@@ -292,13 +285,13 @@
             <h1>Products and Services</h1>
             <p>We provide ready-to-use Excel-based finance tools that deliver clear variance analysis, rolling forecasts, cash flow models, KPI dashboards and more.</p>
             <p>Our store is being regularly expanded with new high-quality templates tailored to real-world finance needs.</p>
-            
+          
             <hr style="max-width: 720px; margin: 48px auto; border: none; height: 1px; background: rgba(212,175,119,0.25);">
-            
+          
             <p><strong>Enterprise & Custom Editions:</strong> The base version of our tool are designed to deliver professional results for most users and organizations.</p>
             <p>For larger-scale needs, advanced functionality, or highly specific requirements, we offer Enterprise and Custom Editions.</p>
             <p>Common extensions include:</p>
-            
+          
             <ul>
                 <li>Significantly increased capacity</li>
                 <li>Multi-currency support</li>
@@ -306,17 +299,16 @@
                 <li>Custom branding and additional reporting modules</li>
                 <li>Tailored features specific to your business</li>
             </ul>
-            
+          
             <div style="max-width: 720px; margin: 48px auto 32px; border-top: 1px solid rgba(212,175,119,0.25);"></div>
-            
+          
             <p>All enterprise and custom versions are priced individually based on scope and complexity.</p>
             <p>If you have special requirements, feel free to reach out — we are happy to create a solution that fits your exact needs.</p>
-
-            <!-- How You Can Work With Us Cards -->
+          
             <div style="max-width: 720px; margin: 56px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
-            
+          
             <h2 style="text-align: center; margin: 48px 0 32px; color: #d4af77; font-size: 1.85rem;">How You Can Work With Us</h2>
-            
+          
             <div class="work-with-us-grid">
                 <div class="work-card">
                     <h3>Ready-to-Use Templates</h3>
@@ -331,45 +323,36 @@
                     <p>Process optimization and template architecture support for finance teams that want to level up.</p>
                 </div>
             </div>
-
-            <!-- Featured Templates - 4 Cards -->
+          
             <div style="max-width: 720px; margin: 56px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
-            
+          
             <h2 style="text-align: center; margin: 48px 0 24px; color: #d4af77; font-size: 1.85rem;">Featured Templates</h2>
             <p style="max-width: 620px; margin: 0 auto 40px; font-size: 1.05rem;">Professional-grade tools used by finance teams who refuse to compromise on quality.</p>
-            
+          
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto;">
-                
-                <!-- Card 1: P&L -->
                 <div class="product-card">
                     <h3>P&L Analysis & Variance Dashboard – CFO Executive View</h3>
                     <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">Monthly P&L with variance analysis, trend tracking, and executive summary.</p>
                     <div class="price">€39</div>
                 </div>
-                
-                <!-- Card 2: Cash Flow -->
                 <div class="product-card">
                     <h3>Cash Flow Analysis & Variance Dashboard – CFO Executive View</h3>
                     <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">Weekly and monthly cash flow analysis with variance tracking.</p>
                     <div class="price">€39</div>
                 </div>
-                
-                <!-- Card 3: NWC €99 -->
                 <div class="product-card">
                     <h3>NWC Dashboard – 12-Month Rolling View – CFO Executive View</h3>
                     <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">Net Working Capital tracking and optimization tool with rolling forecast.</p>
                     <div class="price">€99 <small>(Advanced)</small></div>
                 </div>
-                
-                <!-- Card 4: NEW - GAAP to IFRS Transition File €99 -->
                 <div class="product-card">
                     <h3>GAAP to IFRS Transition File – CFO Executive Edition</h3>
                     <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">36-column tool for Local GAAP to IFRS conversion (P&L + Balance Sheet) with auto-calculated IFRS figures.</p>
                     <div class="price">€99 <small>(Advanced)</small></div>
                 </div>
-                
             </div>
-            
+          
+            <!-- RESTORED BUTTON -->
             <a href="https://shop.precisionsheets.info/" target="_blank" class="button" style="margin-top: 48px;">
                 View All Templates on Gumroad
             </a>
@@ -398,13 +381,11 @@
             switcher.addEventListener('click', () => dropdown.classList.toggle('show'));
             document.addEventListener('click', () => dropdown.classList.remove('show'));
         }
-
         function initActiveNav() {
             const navLinks = document.querySelectorAll('.nav-link');
             const homeSection = document.getElementById('home');
             const aboutSection = document.getElementById('about');
             const productsSection = document.getElementById('products');
-
             function setActiveNav() {
                 const scrollY = window.scrollY + 120;
                 navLinks.forEach(link => link.classList.remove('active'));
@@ -416,11 +397,9 @@
                     document.querySelector('[data-section="products"]').classList.add('active');
                 }
             }
-
             window.addEventListener('scroll', setActiveNav);
             setActiveNav();
         }
-
         document.addEventListener('DOMContentLoaded', () => {
             initLanguageSwitcher();
             initActiveNav();
