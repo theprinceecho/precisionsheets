@@ -71,7 +71,31 @@
         .logo { width: 320px; height: 320px; border-radius: 24px; margin: 0 auto 24px; display: block; object-fit: contain; border: 3px solid rgba(212,175,119,0.6); }
         h1 { font-size: 2.8rem; margin-bottom: 12px; letter-spacing: -1.4px; color: #d4af77; }
         .subtitle { font-size: 1.2rem; opacity: 0.92; margin-bottom: 40px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.5; color: #ffffff; }
-        
+
+        /* Button styling - RESTORED */
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 280px;
+            height: 62px;
+            margin: 12px auto;
+            padding: 0 32px;
+            background: rgba(212,175,119,0.08);
+            color: #d4af77;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.12rem;
+            border: 1px solid rgba(212,175,119,0.4);
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background: rgba(212,175,119,0.15);
+            transform: translateY(-2px);
+        }
+
         .about-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -226,24 +250,24 @@
         </div>
     </nav>
 
-   <!-- Home section – buttons removed + extended spacing -->
-<section id="home" class="section">
-    <div class="hero-content">
-        <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="logo">
-        
-        <h1>
-            PrecisionSheets<br>
-            High-Signal Excel Tools for Finance Professionals
-        </h1>
-        
-        <p class="subtitle">
-            Precision Excel templates & dashboards for FP&A professionals.
-        </p>
-        
-        <!-- Extended spacing to use the vertical space well -->
-        <div style="height: 160px;"></div>
-    </div>
-</section>
+    <!-- Home section -->
+    <section id="home" class="section">
+        <div class="hero-content">
+            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="logo">
+           
+            <h1>
+                PrecisionSheets<br>
+                High-Signal Excel Tools for Finance Professionals
+            </h1>
+           
+            <p class="subtitle">
+                Precision Excel templates & dashboards for FP&A professionals.
+            </p>
+           
+            <!-- Extended spacing -->
+            <div style="height: 160px;"></div>
+        </div>
+    </section>
 
     <div style="max-width: 720px; margin: 0 auto; border-top: 1px solid rgba(212,175,119,0.25);"></div>
 
@@ -291,13 +315,13 @@
             <h1>Products and Services</h1>
             <p>We provide ready-to-use Excel-based finance tools that deliver clear variance analysis, rolling forecasts, cash flow models, KPI dashboards and more.</p>
             <p>Our store is being regularly expanded with new high-quality templates tailored to real-world finance needs.</p>
-          
+         
             <hr style="max-width: 720px; margin: 48px auto; border: none; height: 1px; background: rgba(212,175,119,0.25);">
-          
+         
             <p><strong>Enterprise & Custom Editions:</strong> The base version of our tool are designed to deliver professional results for most users and organizations.</p>
             <p>For larger-scale needs, advanced functionality, or highly specific requirements, we offer Enterprise and Custom Editions.</p>
             <p>Common extensions include:</p>
-          
+         
             <ul>
                 <li>Significantly increased capacity</li>
                 <li>Multi-currency support</li>
@@ -305,16 +329,16 @@
                 <li>Custom branding and additional reporting modules</li>
                 <li>Tailored features specific to your business</li>
             </ul>
-          
+         
             <div style="max-width: 720px; margin: 48px auto 32px; border-top: 1px solid rgba(212,175,119,0.25);"></div>
-          
+         
             <p>All enterprise and custom versions are priced individually based on scope and complexity.</p>
             <p>If you have special requirements, feel free to reach out — we are happy to create a solution that fits your exact needs.</p>
-          
+         
             <div style="max-width: 720px; margin: 56px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
-          
+         
             <h2 style="text-align: center; margin: 48px 0 32px; color: #d4af77; font-size: 1.85rem;">How You Can Work With Us</h2>
-          
+         
             <div class="work-with-us-grid">
                 <div class="work-card">
                     <h3>Ready-to-Use Templates</h3>
@@ -329,12 +353,12 @@
                     <p>Process optimization and template architecture support for finance teams that want to level up.</p>
                 </div>
             </div>
-          
+         
             <div style="max-width: 720px; margin: 56px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
-          
+         
             <h2 style="text-align: center; margin: 48px 0 24px; color: #d4af77; font-size: 1.85rem;">Featured Templates</h2>
             <p style="max-width: 620px; margin: 0 auto 40px; font-size: 1.05rem;">Professional-grade tools used by finance teams who refuse to compromise on quality.</p>
-          
+         
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto;">
                 <div class="product-card">
                     <h3>P&L Analysis & Variance Dashboard – CFO Executive View</h3>
@@ -357,8 +381,8 @@
                     <div class="price">€99 <small>(Advanced)</small></div>
                 </div>
             </div>
-          
-            <!-- RESTORED BUTTON -->
+         
+            <!-- RESTORED STYLED BUTTON -->
             <a href="https://shop.precisionsheets.info/" target="_blank" class="button" style="margin-top: 48px;">
                 View All Templates on Gumroad
             </a>
