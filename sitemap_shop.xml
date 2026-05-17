@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Shop Homepage -->
+  <url>
+    <loc>https://shop.precisionsheets.info/</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main Products / Catalog Page (if exists) -->
+  <url>
+    <loc>https://shop.precisionsheets.info/products</loc>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Optional: Important collection or category pages -->
+  <!-- Add more product/collection URLs below as needed -->
+
+</urlset>
