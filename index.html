@@ -25,7 +25,6 @@
             overflow-x: hidden;
         }
 
-        /* Clean Header */
         .nav {
             position: fixed;
             top: 0;
@@ -68,7 +67,6 @@
             color: #d4af77;
         }
 
-        /* Golden active indicator */
         .nav-links a.active {
             color: #d4af77;
         }
@@ -273,11 +271,12 @@
 </head>
 <body>
 
-    <!-- Header -->
     <nav class="nav">
         <div style="display: flex; align-items: center;">
-            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" 
-                 alt="PrecisionSheets" class="nav-logo">
+            <a href="#home">
+                <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" 
+                     alt="PrecisionSheets" class="nav-logo">
+            </a>
             
             <div class="nav-links">
                 <a href="#about" class="nav-link" data-section="about">About</a>
@@ -291,8 +290,7 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
+    <section class="hero" id="home">
         <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" 
              alt="PrecisionSheets" class="hero-logo">
         
@@ -300,7 +298,6 @@
         <p>High-signal Excel tools for finance professionals<br>who value clarity and precision.</p>
     </section>
 
-    <!-- About -->
     <section id="about" class="section">
         <div class="section-header">
             <h2>The Standard</h2>
@@ -312,7 +309,6 @@
         </p>
     </section>
 
-    <!-- Where to Find What -->
     <section id="find" class="section">
         <div class="section-header">
             <h2>Where to Find What</h2>
@@ -321,7 +317,7 @@
 
         <div class="find-grid">
             <div class="find-card">
-                <div class="icon" style="font-size: 1.8rem; font-weight: 700; line-height: 1;">𝕏</div>
+                <div class="icon">🕊</div>
                 <h3>On X</h3>
                 <p>Sharp observations and updates on new templates and financial modeling approaches.</p>
                 <a href="https://x.com/precisionsheets">Follow on X →</a>
@@ -345,7 +341,6 @@
         </div>
     </section>
 
-    <!-- Featured Templates -->
     <section id="templates" class="section">
         <div class="section-header">
             <h2>Featured Templates</h2>
@@ -378,7 +373,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <div class="footer">
         <p>High-precision tools for serious finance teams</p>
         <p style="margin-top: 10px;">
