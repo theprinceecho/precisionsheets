@@ -72,7 +72,6 @@
         h1 { font-size: 2.8rem; margin-bottom: 12px; letter-spacing: -1.4px; color: #d4af77; }
         .subtitle { font-size: 1.2rem; opacity: 0.92; margin-bottom: 40px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.5; color: #ffffff; }
 
-        /* Button styling - RESTORED */
         .button {
             display: flex;
             align-items: center;
@@ -163,11 +162,13 @@
             line-height: 1.6;
             color: #e0e0e0;
         }
+
+        /* Stronger square-like card styling */
         .product-card {
             background: #0a1628;
             border: 1px solid rgba(212,175,119,0.15);
             border-radius: 16px;
-            padding: 28px 24px;
+            padding: 36px 28px;
             transition: all 0.3s ease;
         }
         .product-card:hover {
@@ -177,20 +178,16 @@
         .product-card h3 {
             font-size: 1.15rem;
             color: #d4af77;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             line-height: 1.3;
         }
-        .product-card .price {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #d4af77;
-            margin-top: 12px;
+        .product-card p {
+            font-size: 0.92rem;
+            opacity: 0.85;
+            margin: 0 0 6px 0;
+            line-height: 1.5;
         }
-        .product-card .price small {
-            font-size: 0.85rem;
-            font-weight: 400;
-            opacity: 0.7;
-        }
+
         @media (max-width: 768px) {
             .about-container { grid-template-columns: 1fr; gap: 60px; }
             .threshold-left h1, .threshold-left .subtitle { text-align: center; }
@@ -250,27 +247,21 @@
         </div>
     </nav>
 
-<!-- Home section – improved vertical spacing -->
 <section id="home" class="section" style="padding-top: 60px; padding-bottom: 40px;">
     <div class="hero-content">
-        
-        <!-- Logo with more space below -->
         <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" 
              alt="PrecisionSheets" 
              class="logo" 
              style="margin-bottom: 56px;">
         
-        <!-- Headline with good spacing below -->
         <h1 style="margin-bottom: 24px; line-height: 1.1;">
             PrecisionSheets<br>
             High-Signal Excel Tools for Finance Professionals
         </h1>
         
-        <!-- Subtitle with breathing room -->
         <p class="subtitle" style="margin-bottom: 80px; max-width: 560px;">
             Precision Excel templates & dashboards for FP&A professionals.
         </p>
-        
     </div>
 </section>
 
@@ -289,12 +280,11 @@
             <div class="where-to-find">
                 <h3>WHERE TO FIND WHAT</h3>
                 <div class="find-card">
-                    <div class="icon">𝕏</div>
+                    <div class="icon">♕</div>
                     <h4>On X</h4>
                     <p>Sharp observations and updates on new templates and financial modeling approaches.</p>
                     <a href="https://x.com/precisionsheets">Follow on X →</a>
                 </div>
-                <!-- LinkedIn card -->
                 <div class="find-card">
                     <div class="icon" style="padding:0;">
                         <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/linkedin.png" alt="LinkedIn" style="width:42px;height:42px;border-radius:50%;display:block;">
@@ -342,52 +332,32 @@
          
             <div style="max-width: 720px; margin: 56px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
          
-            <h2 style="text-align: center; margin: 48px 0 32px; color: #d4af77; font-size: 1.85rem;">How You Can Work With Us</h2>
-         
-            <div class="work-with-us-grid">
-                <div class="work-card">
-                    <h3>Ready-to-Use Templates</h3>
-                    <p>Professional Excel tools for P&L, Cash Flow, NWC, and more. Start delivering results immediately.</p>
-                </div>
-                <div class="work-card">
-                    <h3>Custom Development</h3>
-                    <p>Tailored dashboards and planning models built specifically for your processes, data, and reporting needs.</p>
-                </div>
-                <div class="work-card">
-                    <h3>FP&A Advisory</h3>
-                    <p>Process optimization and template architecture support for finance teams that want to level up.</p>
-                </div>
-            </div>
-         
-            <div style="max-width: 720px; margin: 56px auto 0; border-top: 1px solid rgba(212,175,119,0.25);"></div>
-         
             <h2 style="text-align: center; margin: 48px 0 24px; color: #d4af77; font-size: 1.85rem;">Featured Templates</h2>
             <p style="max-width: 620px; margin: 0 auto 40px; font-size: 1.05rem;">Professional-grade tools used by finance teams who refuse to compromise on quality.</p>
          
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto;">
+                <!-- Card 1 -->
                 <div class="product-card">
                     <h3>P&L Analysis & Variance Dashboard – CFO Executive View</h3>
-                    <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">Monthly P&L with variance analysis, trend tracking, and executive summary.</p>
-                    <div class="price">€39</div>
+                    <p>Monthly P&L with variance analysis, trend tracking, and executive summary.</p>
                 </div>
+                <!-- Card 2 -->
                 <div class="product-card">
                     <h3>Cash Flow Analysis & Variance Dashboard – CFO Executive View</h3>
-                    <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">Weekly and monthly cash flow analysis with variance tracking.</p>
-                    <div class="price">€39</div>
+                    <p>Weekly and monthly cash flow analysis with variance tracking.</p>
                 </div>
+                <!-- Card 3 -->
                 <div class="product-card">
                     <h3>NWC Dashboard – 12-Month Rolling View – CFO Executive View</h3>
-                    <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">Net Working Capital tracking and optimization tool with rolling forecast.</p>
-                    <div class="price">€99 <small>(Advanced)</small></div>
+                    <p>Net Working Capital tracking and optimization tool with rolling forecast.</p>
                 </div>
+                <!-- Card 4 -->
                 <div class="product-card">
                     <h3>GAAP to IFRS Transition File – CFO Executive Edition</h3>
-                    <p style="font-size: 0.92rem; opacity: 0.85; margin: 10px 0 18px; line-height: 1.5;">36-column tool for Local GAAP to IFRS conversion (P&L + Balance Sheet) with auto-calculated IFRS figures.</p>
-                    <div class="price">€99 <small>(Advanced)</small></div>
+                    <p>36-column tool for Local GAAP to IFRS conversion (P&L + Balance Sheet) with auto-calculated IFRS figures.</p>
                 </div>
             </div>
          
-            <!-- RESTORED STYLED BUTTON -->
             <a href="https://shop.precisionsheets.info/" target="_blank" class="button" style="margin-top: 48px;">
                 View All Templates on Gumroad
             </a>
