@@ -2,92 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact • PrecisionSheets</title>
     <meta name="description" content="Get in touch with PrecisionSheets. Questions about Excel templates, FP&A dashboards, or custom solutions? We reply within 24 hours.">
     <link rel="canonical" href="https://precisionsheets.info/contact" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg">
-   
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-       
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', system_ui, sans-serif;
-            background: #0a1628;
-            color: #d4af77;
-            min-height: 100vh;
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #0a1628;
+            color: #ffffff;
+            line-height: 1.65;
+        }
+
         .nav {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            height: 60px;
-            background: rgba(10, 22, 40, 0.95);
-            backdrop-filter: blur(12px);
+            height: 66px;
+            background: rgba(10, 22, 40, 0.96);
+            backdrop-filter: blur(14px);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 24px;
-            z-index: 100;
+            padding: 0 28px;
+            z-index: 200;
+            border-bottom: 1px solid rgba(212, 175, 119, 0.08);
         }
-        .nav-logo { height: 32px; cursor: pointer; border-radius: 8px; overflow: hidden; border: 2px solid rgba(212,175,119,0.4); }
+
+        .nav-logo {
+            height: 34px;
+            border-radius: 8px;
+            margin-right: 12px;
+        }
+
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 36px;
             font-size: 0.95rem;
         }
+
         .nav-links a {
             color: #ffffff;
             text-decoration: none;
             font-weight: 500;
-        }
-        .language-switcher {
             position: relative;
-            cursor: pointer;
-            user-select: none;
-            -webkit-tap-highlight-color: transparent;
+            padding-bottom: 6px;
+            transition: color 0.2s ease;
         }
-        .current-lang {
+
+        .nav-links a:hover {
+            color: #d4af77;
+        }
+
+        .nav-links a.active {
+            color: #d4af77;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2.5px;
+            background: #d4af77;
+            border-radius: 3px;
+        }
+
+        .language-indicator {
             display: flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #ffffff;
-        }
-        .language-dropdown {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: #111111;
-            border: 1px solid rgba(212,175,119,0.3);
-            border-radius: 8px;
-            padding: 8px 0;
-            margin-top: 8px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-            display: none;
-            flex-direction: column;
-            min-width: 140px;
-        }
-        .language-dropdown.show { display: flex; }
-        .language-option {
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            font-weight: 500;
             color: #d4af77;
-            text-decoration: none;
+            background: rgba(212, 175, 119, 0.08);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            border: 1px solid rgba(212, 175, 119, 0.2);
         }
-        .language-option:hover, .language-option:active {
-            background: rgba(212,175,119,0.15);
-        }
+
         .main-content {
             padding-top: 120px;
             padding-bottom: 80px;
@@ -95,7 +101,7 @@
             margin: 0 auto;
             text-align: center;
         }
-       
+
         h1 {
             font-size: 3rem;
             font-weight: 600;
@@ -103,19 +109,17 @@
             margin-bottom: 28px;
             color: #d4af77;
         }
-       
+
         .form-container {
             padding: 0 40px;
             max-width: 920px;
             margin: 0 auto;
         }
 
-        /* Responsive spacer for better mobile spacing after Tally form */
         .form-spacer {
             height: 80px;
         }
 
-        /* Mobile adjustments */
         @media (max-width: 480px) {
             .nav { padding: 0 20px; }
             .nav-links { gap: 18px; }
@@ -124,16 +128,9 @@
                 padding-bottom: 55px;
             }
             h1 { font-size: 2.55rem; margin-bottom: 22px; }
-            .main-content p { margin-bottom: 48px; font-size: 1.17rem; }
-            .form-container { 
-                padding: 0 20px; 
-                padding-bottom: 16px;
-            }
+            .form-container { padding: 0 20px; padding-bottom: 16px; }
             iframe { width: 100% !important; max-width: 100% !important; }
-            
-            .form-spacer {
-                height: 30px; /* Further tightened mobile spacing */
-            }
+            .form-spacer { height: 30px; }
         }
 
         .footer {
@@ -151,28 +148,28 @@
             line-height: 1.8;
             background: #11253a;
         }
+
         .footer a { color: #ffffff !important; text-decoration: none; }
         .footer-line1 { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; justify-content: center; }
         .copyright { font-size: 0.85rem; opacity: 0.7; margin-top: 20px; }
     </style>
 </head>
 <body>
+    <!-- Consistent Header -->
     <nav class="nav">
-        <a href="index.html">
-            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" alt="PrecisionSheets" class="nav-logo">
-        </a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#products">Products & Services</a>
-           
-            <div class="language-switcher" id="language-switcher">
-                <span class="current-lang" id="current-lang-display">🇺🇸 <strong>US</strong></span>
-                <div class="language-dropdown" id="language-dropdown">
-                    <a href="#" class="language-option" data-lang="en">🇺🇸 US</a>
-                    <a href="#" class="language-option" data-lang="de">🇩🇪 DE</a>
-                </div>
+        <div style="display: flex; align-items: center;">
+            <img src="https://raw.githubusercontent.com/theprinceecho/precisionsheets/main/PS_Logo_new.jpg" 
+                 alt="PrecisionSheets" class="nav-logo">
+            
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="index.html#find">Discover</a>
+                <a href="index.html#templates">Templates</a>
             </div>
+        </div>
+
+        <div class="language-indicator">
+            🇺🇸 <span>US</span>
         </div>
     </nav>
 
@@ -192,9 +189,7 @@
             </iframe>
         </div>
 
-        <!-- Responsive spacer -->
         <div class="form-spacer"></div>
-        
     </div>
 
     <div class="footer">
