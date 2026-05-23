@@ -10,39 +10,50 @@
 
 PrecisionSheets provides clean, ready-to-use Excel templates designed for real-world financial work. The tools are built to work seamlessly whether you are on the go or back at your desk, and are structured to be easily combined with your own data and Chart of Accounts.
 
+## GitHub CI/CD Architecture
+
+This repository uses a clean and lightweight CI/CD setup:
+
+- **CI Workflow**: Runs HTMLHint linting on every push and pull request
+- **Deploy Workflow**: Automatically publishes the site to GitHub Pages on push to `main`
+
+![GitHub CI/CD Workflow Chart](assets/github-ci-cd-workflow-chart.jpg)
+
 ## Project Structure
 
 ```
 .
-├── index.html          # Main landing page
-├── contact.html        # Contact form
-├── legal.html          # Legal disclosure
-├── .github/workflows/  # CI/CD workflows
-├── .htmlhintrc         # HTML linting configuration
-└── .nojekyll           # GitHub Pages configuration
+├── index.html
+├── contact.html
+├── legal.html
+├── .github/workflows/
+│   ├── ci.yml
+│   └── deploy.yml
+├── .htmlhintrc
+├── .nojekyll
+└── README.md
 ```
 
-## CI / CD
-
-This project uses GitHub Actions for quality assurance and automated deployment:
+## CI / CD Details
 
 ### CI Workflow (`.github/workflows/ci.yml`)
-- Runs on every push and pull request
-- Performs HTML linting using **HTMLHint**
-- Helps maintain code quality and consistency
+- Triggers: Push to `main` + Pull Requests
+- Runs **HTMLHint** for HTML quality checks
+- Ensures code consistency before merging
 
 ### Deployment Workflow (`.github/workflows/deploy.yml`)
-- Automatically deploys the site to GitHub Pages on every push to `main`
-- Uses the modern GitHub Pages deployment method
+- Triggers: Push to `main`
+- Deploys the static site to **GitHub Pages** using modern deployment
 
 ## Local Development
 
-No build step is required. Simply open `index.html` in any modern browser.
+No build step required. Open `index.html` in any modern browser.
 
 ## Contributing
 
-1. Make your changes
-2. Ensure the HTML linting checks pass (CI will run automatically on PRs)
-3. Open a pull request
+We follow a disciplined approach:
+- Think before making changes
+- Keep modifications minimal and focused
+- Ensure HTML linting passes
 
-We follow a "think before changing" and "simplicity first" approach. Please keep changes focused and minimal.
+Open a pull request once your changes are ready.
