@@ -19,6 +19,19 @@ This repository uses a clean and lightweight CI/CD setup:
 
 ![GitHub CI/CD Workflow Chart](assets/github-ci-cd-workflow-chart.jpg)
 
+### GitHub Setup Status
+
+| Component                  | File / Path                              | Status    | Purpose                                           |
+|---------------------------|------------------------------------------|-----------|---------------------------------------------------|
+| **CI Workflow**           | `.github/workflows/ci.yml`               | 🟢 Active | HTML linting on push & PR                         |
+| **Deploy Workflow**       | `.github/workflows/deploy.yml`           | 🟢 Active | Automatic deployment to GitHub Pages              |
+| **HTML Linting Config**   | `.htmlhintrc`                            | 🟢 Active | Defines HTML quality & accessibility rules        |
+| **GitHub Pages Config**   | `.nojekyll`                              | 🟢 Active | Prevents Jekyll processing on static HTML         |
+| **Documentation**         | `README.md`                              | 🟢 Active | Project overview + CI/CD documentation            |
+| **Workflow Chart**        | `assets/github-ci-cd-workflow-chart.jpg` | 🟢 Active | Visual reference of the full GitHub setup         |
+| **Pull Request Checks**   | CI Workflow                              | 🟢 Active | Linting enforced automatically on every PR        |
+| **Auto Deployment**       | Deploy Workflow                          | 🟢 Active | Site updates live automatically on push to `main` |
+
 ## Project Structure
 
 ```
