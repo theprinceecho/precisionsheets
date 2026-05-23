@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate key HTML files exist
+        run: |
+          echo "Checking that core HTML files exist..."
+          ls -la index.html contact.html legal.html
+          echo "All core files found."
