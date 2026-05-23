@@ -7,15 +7,20 @@ on:
     branches: [ main ]
 
 jobs:
-  validate:
+  lint:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Validate key HTML files exist
-        run: |
-          echo "Checking that core HTML files exist..."
-          ls -la index.html contact.html legal.html
-          echo "All core files found."
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      - name: Run HTMLHint
+        run: npx htmlhint "index.html" "contact.html" "legal.html"
