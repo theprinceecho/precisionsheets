@@ -14,23 +14,22 @@ PrecisionSheets provides clean, ready-to-use Excel templates designed for real-w
 
 This repository uses a clean and lightweight CI/CD setup:
 
-- **CI Workflow**: Runs HTMLHint linting on every push and pull request
+- **PR Checks Workflow**: Runs HTMLHint + Lighthouse CI on Pull Requests
 - **Deploy Workflow**: Automatically publishes the site to GitHub Pages on push to `main`
 
 ![GitHub CI/CD Workflow Chart](assets/github-ci-cd-workflow-chart.jpg)
 
 ### GitHub Setup Status
 
-| Component                  | File / Path                              | Status    | Purpose                                           |
-|---------------------------|------------------------------------------|-----------|---------------------------------------------------|
-| **CI Workflow**           | `.github/workflows/ci.yml`               | 🟢 Active | HTML linting on push & PR                         |
-| **Deploy Workflow**       | `.github/workflows/deploy.yml`           | 🟢 Active | Automatic deployment to GitHub Pages              |
-| **HTML Linting Config**   | `.htmlhintrc`                            | 🟢 Active | Defines HTML quality & accessibility rules        |
-| **GitHub Pages Config**   | `.nojekyll`                              | 🟢 Active | Prevents Jekyll processing on static HTML         |
-| **Documentation**         | `README.md`                              | 🟢 Active | Project overview + CI/CD documentation            |
-| **Workflow Chart**        | `assets/github-ci-cd-workflow-chart.jpg` | 🟢 Active | Visual reference of the full GitHub setup         |
-| **Pull Request Checks**   | CI Workflow                              | 🟢 Active | Linting enforced automatically on every PR        |
-| **Auto Deployment**       | Deploy Workflow                          | 🟢 Active | Site updates live automatically on push to `main` |
+| Component                  | File / Path                                  | Status    | Purpose                                              |
+|---------------------------|----------------------------------------------|-----------|------------------------------------------------------|
+| **PR Checks Workflow**    | `.github/workflows/pr-checks.yml`            | 🟢 Active | HTML Linting + Lighthouse CI on Pull Requests        |
+| **Deploy Workflow**       | `.github/workflows/deploy.yml`               | 🟢 Active | Automatic deployment to GitHub Pages                 |
+| **HTML Linting Config**   | `.htmlhintrc`                                | 🟢 Active | Defines HTML quality & accessibility rules           |
+| **Lighthouse Config**     | `lighthouserc.json`                          | 🟢 Active | Lighthouse CI configuration (Performance, A11y, SEO) |
+| **GitHub Pages Config**   | `.nojekyll`                                  | 🟢 Active | Prevents Jekyll processing on static HTML            |
+| **Documentation**         | `README.md`                                  | 🟢 Active | Project overview + CI/CD documentation               |
+| **Workflow Chart**        | `assets/github-ci-cd-workflow-chart.jpg`     | 🟢 Active | Visual reference of the full GitHub setup            |
 
 ## Project Structure
 
@@ -40,8 +39,9 @@ This repository uses a clean and lightweight CI/CD setup:
 ├── contact.html
 ├── legal.html
 ├── .github/workflows/
-│   ├── ci.yml
+│   ├── pr-checks.yml
 │   └── deploy.yml
+├── lighthouserc.json
 ├── .htmlhintrc
 ├── .nojekyll
 └── README.md
@@ -49,10 +49,10 @@ This repository uses a clean and lightweight CI/CD setup:
 
 ## CI / CD Details
 
-### CI Workflow (`.github/workflows/ci.yml`)
-- Triggers: Push to `main` + Pull Requests
-- Runs **HTMLHint** for HTML quality checks
-- Ensures code consistency before merging
+### PR Checks Workflow (`.github/workflows/pr-checks.yml`)
+- Runs **HTML Linting** (HTMLHint) on push + Pull Requests
+- Runs **Lighthouse CI** on Pull Requests only (Performance, Accessibility, SEO)
+- Strong quality gates before merging
 
 ### Deployment Workflow (`.github/workflows/deploy.yml`)
 - Triggers: Push to `main`
@@ -67,6 +67,6 @@ No build step required. Open `index.html` in any modern browser.
 We follow a disciplined approach:
 - Think before making changes
 - Keep modifications minimal and focused
-- Ensure HTML linting passes
+- Ensure PR checks pass (HTML + Lighthouse)
 
 Open a pull request once your changes are ready.
