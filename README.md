@@ -55,8 +55,21 @@ This repository uses a clean and lightweight CI/CD setup:
 - Strong quality gates before merging
 
 ### Deployment Workflow (`.github/workflows/deploy.yml`)
-- Triggers: Push to `main`
-- Deploys the static site to **GitHub Pages** using modern deployment
+- Triggers automatically on every push to `main`
+- Uses modern GitHub Pages deployment with OIDC
+- Deploys the entire root folder as the static site
+
+**Manual Deployment**
+
+You can manually trigger a deployment at any time:
+
+1. Go to the **Actions** tab in the repository
+2. Select the **"Deploy static content to Pages"** workflow
+3. Click **"Run workflow"** → **"Run workflow"**
+
+This is useful if you want to redeploy without pushing new code.
+
+> **Note:** For the deployment workflow to work, GitHub Pages must be set to **Source: GitHub Actions** in the repository settings (Settings → Pages).
 
 ## Local Development
 
