@@ -46,6 +46,24 @@ This repository uses a clean and lightweight CI/CD setup:
 ├── .nojekyll
 └── README.md
 ```
+## GitHub Pages Deployment
+
+This repository uses **GitHub Actions** as the deployment source for GitHub Pages (not "Deploy from a branch").
+
+### Current Configuration
+- **Source**: GitHub Actions
+- **Custom Domain**: `precisionsheets.info`
+- **Enforce HTTPS**: Enabled
+
+### Why We Use GitHub Actions
+
+We have a dedicated deployment workflow (`.github/workflows/deploy.yml`) that handles publishing. This is the modern and recommended approach because it:
+
+- Gives full control over when and how the site is deployed
+- Uses secure OIDC authentication (no deploy keys required)
+- Works cleanly together with our PR Checks workflow (`pr-checks.yml`)
+
+The site is automatically deployed on every push to `main`. You can also manually trigger a deployment from the **Actions** tab → **"Deploy static content to Pages"** workflow.
 
 ## CI / CD Details
 
