@@ -1,10 +1,12 @@
 # PrecisionSheets
 
+**Status: to be deleted** after the precisionsheets.info registration expires (Q1 2027). The site was taken down on 2026-10-04. Do not redeploy.
+
 **Professional-grade Excel tools and dashboards for finance professionals who value clarity, precision, and calm decision-making.**
 
 ## Live Site
 
-- [precisionsheets.info](https://precisionsheets.info)
+Taken down 2026-10-04. Domain registration is left to expire (Q1 2027).
 
 ## Overview
 
